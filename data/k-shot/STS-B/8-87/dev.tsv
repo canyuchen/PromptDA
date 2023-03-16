@@ -1,0 +1,17 @@
+index	genre	filename	year	old_index	source1	source2	sentence1	sentence2	score
+3560	main-news	deft-news	2014	0110	none	none	the new law attempts to remove any legal obstacles to building more advanced spy satellites and to help innovation in japans's space industry.	the purpose of the new law is to remove any legal obstacles to building more advanced spy satellites and to encourage innovation in japans's space industry.	4.8
+163	main-captions	MSRvid	2012test	0240	none	none	The man spread butter on the loaf of bread.	A man is spreading butter onto bread.	4.000
+496	main-captions	MSRvid	2012train	0004	none	none	A woman is slicing an onion.	A woman is cutting an onion.	4.200
+1158	main-captions	images	2014	0229	none	none	A silver and blue motorcycle sitting next to a car.	A motorcycle parked next to a car.	3.6
+781	main-captions	MSRvid	2012train	0418	none	none	A woman dances on a stage.	A woman is dancing.	3.200
+3945	main-news	headlines	2013	0241	none	none	US drone strike kills four in North Waziristan	Suspected drone strike kills 4 in Pakistan	2.6
+5578	main-news	headlines	2016	0201	Europe Media Monitor (http://emm.newsbrief.eu)	Europe Media Monitor (http://emm.newsbrief.eu)	Captain of sunken South Korean ferry arrested	Captain of capsized S Korean Ferry Arrested	4
+884	main-captions	MSRvid	2012train	0570	none	none	A man makes a call on a cell phone.	A man is making a phone call.	4.000
+3615	main-news	deft-news	2014	0165	none	none	it did not say if the men had been hanged in prison.	dozens of such criminals have been hanged in public.	1.8
+227	main-captions	MSRvid	2012test	0334	none	none	Someone is greasing a pan.	Smeone is laying down.	0.400
+352	main-captions	MSRvid	2012test	0525	none	none	A woman peels an apple.	A man pops wheelies on a motorcycle.	0.000
+3556	main-news	deft-news	2014	0106	none	none	the plan for tunisia is the creation of electronic databases to facilitate tax collection.	the plan for nigeria and mozambique is the creation an electronic database for real estate.	1.8
+2383	main-forum	deft-forum	2014	0383	none	none	fix?: Islam itself is not political.	Islam has always been political.	1.2
+604	main-captions	MSRvid	2012train	0159	none	none	A man is riding a horse.	A man is driving a car.	1.400
+1823	main-captions	images	2015	0989	none	none	Four black dogs run across the grass.	A dog runs across the grassy field.	2.00
+662	main-captions	MSRvid	2012train	0245	none	none	A woman is firing a rifle.	A woman is cutting a lemon.	0.200

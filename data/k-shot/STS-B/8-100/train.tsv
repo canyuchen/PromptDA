@@ -1,0 +1,17 @@
+index	genre	filename	year	old_index	source1	source2	sentence1	sentence2	score
+5532	main-news	headlines	2015	1458	none	none	Pakistani Taliban chief killed in US drone strike	Funeral for Pakistan Taliban chief 'set to take place'	1.60
+5731	main-news	headlines	2016	1346	Europe Media Monitor (http://emm.newsbrief.eu)	Europe Media Monitor (http://emm.newsbrief.eu)	Ebola UK: NHS staff 'panicked' after suspected Ebola cases	UK says investigating 2 suspected MERS cases	0
+4682	main-news	headlines	2014	0408	none	none	At least 45 killed in Spain train crash	At least 13 killed in triple car bombings in Iraq's Diyala	1
+435	main-captions	MSRvid	2012test	0651	none	none	A woman is mincing some garlic.	A person is cleaning a disk.	0.000
+3951	main-news	headlines	2013	0248	none	none	9 killed in attacks after deadly Iraq day	19 Killed in Iraq Attacks ahead of Ramadan End	1.4
+4597	main-news	headlines	2014	0308	none	none	Zen Report: Ain't easy being high maintenance	Russian meteorite leaves building gaping open	0
+1055	main-captions	images	2014	0077	none	none	A black and white photo of an old train station.	A black and white photo of a motorcycle laying on the ground.	0.2
+5426	main-news	headlines	2015	1178	none	none	UN inspectors hail progress over Syria chemical weapons	U.S. has not concluded Syria used chemical weapons -White House	2.20
+4386	main-news	headlines	2014	0047	none	none	EU ministers 'determined' to resolve horsemeat scandal	EU ministers hold crisis talks over horse meat scandal	4.4
+647	main-captions	MSRvid	2012train	0226	none	none	A cat swings on a ceiling fan.	A cat is spun around by a ceiling fan.	4.200
+1106	main-captions	images	2014	0147	none	none	A Victory Liner bus is white with red and gold stripes.	A white tour bus with red, orange and yellow stripes.	3.2
+2745	main-news	MSRpar	2012test	0446	none	none	Mr. Geoghan had been living in a protective custody unit since being transferred to the prison on April 3.	He had been in protective custody since being transferred to Souza-Baranowski in April, officials said.	2.800
+2164	main-forum	deft-forum	2014	0164	none	none	to repeat: They are NOT as sovereign as they were before.	They are NOT as sovereign as they were before.	4.5
+4242	main-news	headlines	2013	0614	none	none	N Korea warns of retaliation for South Korea drill	North warns of retaliation for Seoul's naval drill plan	3.6
+5031	main-news	headlines	2015	0192	none	none	Red Sox beat Tigers to reach World Series	Red Sox beat Tigers 5-2 to advance to World Series	4.40
+2058	main-forum	deft-forum	2014	0058	none	none	You have too much regulation, not too little.	You have to much intervention in free markets, not too little.	3.8

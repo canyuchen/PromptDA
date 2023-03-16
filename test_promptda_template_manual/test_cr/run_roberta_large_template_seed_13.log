@@ -1,0 +1,1443 @@
+06/27 07:41:09 PM The args: Namespace(TD_alternate_1=False, TD_alternate_2=False, TD_alternate_3=False, TD_alternate_4=False, TD_alternate_5=False, TD_alternate_6=False, TD_alternate_7=False, TD_alternate_feature_distill=False, TD_alternate_feature_epochs=10, TD_alternate_last_layer_mapping=False, TD_alternate_prediction=False, TD_alternate_prediction_distill=False, TD_alternate_prediction_epochs=3, TD_alternate_uniform_layer_mapping=False, TD_baseline=False, TD_baseline_feature_att_epochs=10, TD_baseline_feature_epochs=13, TD_baseline_feature_repre_epochs=3, TD_baseline_prediction_epochs=3, TD_fine_tune_mlm=False, TD_fine_tune_normal=False, TD_one_step=False, TD_three_step=False, TD_three_step_att_distill=False, TD_three_step_att_pairwise_distill=False, TD_three_step_prediction_distill=False, TD_three_step_repre_distill=False, TD_two_step=False, aug_train=False, beta=0.001, cache_dir='', data_dir='../../data/k-shot/cr/8-13/', data_seed=13, data_url='', dataset_num=8, do_eval=False, do_eval_mlm=False, do_lower_case=True, eval_batch_size=32, eval_step=5, gradient_accumulation_steps=1, init_method='', learning_rate=3e-06, max_seq_length=128, no_cuda=False, num_train_epochs=10.0, only_one_layer_mapping=False, ood_data_dir=None, ood_eval=False, ood_max_seq_length=128, ood_task_name=None, output_dir='../../output/dataset_num_8_fine_tune_mlm_few_shot_3_label_word_batch_size_4_bert-large-uncased/', pred_distill=False, pred_distill_multi_loss=False, seed=42, student_model='../../data/model/roberta-large/', task_name='cr', teacher_model=None, temperature=1.0, train_batch_size=4, train_url='', use_CLS=False, warmup_proportion=0.1, weight_decay=0.0001)
+06/27 07:41:09 PM device: cuda n_gpu: 1
+06/27 07:41:09 PM Writing example 0 of 48
+06/27 07:41:09 PM *** Example ***
+06/27 07:41:09 PM guid: train-1
+06/27 07:41:09 PM tokens: <s> the Ġtouch Ġbuttons Ġare Ġtext ured Ġso Ġthat Ġyour Ġfinger Ġs don Ġ' t Ġslip Ġwhich Ġwas Ġvery Ġthoughtful Ġ. </s> ĠIt Ġis <mask>
+06/27 07:41:09 PM input_ids: 0 627 2842 14893 32 2788 4075 98 14 110 8411 579 7254 128 90 9215 61 21 182 16801 479 2 85 16 50264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+06/27 07:41:09 PM input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+06/27 07:41:09 PM segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+06/27 07:41:09 PM label: ['Ġgood']
+06/27 07:41:09 PM Writing example 0 of 16
+06/27 07:41:09 PM *** Example ***
+06/27 07:41:09 PM guid: dev-1
+06/27 07:41:09 PM tokens: <s> " all Ġthe Ġ"" Ġcool Ġ"" Ġfeatures Ġof Ġthe Ġmini Ġ, Ġbut Ġwith Ġ20 gb Ġinstead Ġof Ġ5 Ġ." </s> ĠIt Ġis <mask>
+06/27 07:41:09 PM input_ids: 0 113 1250 5 41039 3035 41039 1575 9 5 7983 2156 53 19 291 19562 1386 9 195 39058 2 85 16 50264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+06/27 07:41:09 PM input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+06/27 07:41:09 PM segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+06/27 07:41:09 PM label: ['Ġgood']
+06/27 07:41:09 PM Writing example 0 of 2000
+06/27 07:41:09 PM *** Example ***
+06/27 07:41:09 PM guid: dev-1
+06/27 07:41:09 PM tokens: <s> weak nesses Ġare Ġminor Ġ: Ġthe Ġfeel Ġand Ġlayout Ġof Ġthe Ġremote Ġcontrol Ġare Ġonly Ġso - so Ġ; Ġ. Ġit Ġdoes Ġn Ġ' t Ġshow Ġthe Ġcomplete Ġfile Ġnames Ġof Ġmp 3 s Ġwith Ġreally Ġlong Ġnames Ġ; Ġ. Ġyou Ġmust Ġcycle Ġthrough Ġevery Ġzoom Ġsetting Ġ( Ġ2 x Ġ, Ġ3 x Ġ, Ġ4 x Ġ, Ġ1 / 2 x Ġ, Ġetc Ġ. Ġ) Ġbefore Ġgetting Ġback Ġto Ġnormal Ġsize Ġ[ Ġsorry Ġif Ġi Ġ' m Ġjust Ġignorant Ġof Ġa Ġway Ġto Ġget Ġback Ġto Ġ1 x Ġquickly Ġ] Ġ. </s> ĠIt Ġis <mask>
+06/27 07:41:09 PM input_ids: 0 25785 43010 32 3694 4832 5 619 8 18472 9 5 6063 797 32 129 98 12 2527 25606 479 24 473 295 128 90 311 5 1498 2870 2523 9 44857 246 29 19 269 251 2523 25606 479 47 531 4943 149 358 21762 2749 36 132 1178 2156 155 1178 2156 204 1178 2156 112 73 176 1178 2156 4753 479 4839 137 562 124 7 2340 1836 646 6661 114 939 128 119 95 27726 9 10 169 7 120 124 7 112 1178 1335 27779 479 2 85 16 50264 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+06/27 07:41:09 PM input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+06/27 07:41:09 PM segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+06/27 07:41:09 PM label: ['Ġterrible']
+06/27 07:41:22 PM ***** Running training *****
+06/27 07:41:22 PM   Num examples = 48
+06/27 07:41:22 PM   Batch size = 4
+06/27 07:41:22 PM   Num steps = 120
+06/27 07:41:22 PM n: embeddings.word_embeddings.weight
+06/27 07:41:22 PM n: embeddings.position_embeddings.weight
+06/27 07:41:22 PM n: embeddings.token_type_embeddings.weight
+06/27 07:41:22 PM n: embeddings.LayerNorm.weight
+06/27 07:41:22 PM n: embeddings.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.0.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.0.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.0.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.0.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.0.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.0.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.0.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.0.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.0.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.0.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.0.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.0.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.0.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.0.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.0.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.0.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.1.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.1.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.1.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.1.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.1.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.1.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.1.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.1.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.1.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.1.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.1.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.1.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.1.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.1.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.1.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.1.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.2.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.2.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.2.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.2.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.2.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.2.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.2.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.2.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.2.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.2.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.2.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.2.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.2.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.2.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.2.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.2.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.3.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.3.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.3.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.3.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.3.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.3.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.3.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.3.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.3.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.3.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.3.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.3.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.3.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.3.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.3.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.3.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.4.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.4.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.4.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.4.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.4.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.4.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.4.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.4.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.4.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.4.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.4.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.4.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.4.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.4.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.4.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.4.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.5.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.5.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.5.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.5.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.5.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.5.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.5.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.5.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.5.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.5.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.5.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.5.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.5.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.5.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.5.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.5.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.6.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.6.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.6.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.6.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.6.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.6.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.6.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.6.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.6.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.6.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.6.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.6.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.6.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.6.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.6.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.6.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.7.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.7.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.7.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.7.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.7.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.7.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.7.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.7.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.7.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.7.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.7.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.7.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.7.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.7.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.7.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.7.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.8.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.8.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.8.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.8.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.8.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.8.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.8.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.8.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.8.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.8.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.8.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.8.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.8.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.8.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.8.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.8.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.9.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.9.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.9.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.9.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.9.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.9.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.9.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.9.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.9.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.9.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.9.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.9.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.9.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.9.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.9.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.9.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.10.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.10.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.10.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.10.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.10.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.10.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.10.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.10.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.10.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.10.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.10.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.10.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.10.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.10.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.10.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.10.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.11.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.11.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.11.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.11.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.11.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.11.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.11.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.11.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.11.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.11.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.11.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.11.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.11.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.11.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.11.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.11.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.12.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.12.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.12.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.12.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.12.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.12.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.12.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.12.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.12.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.12.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.12.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.12.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.12.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.12.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.12.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.12.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.13.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.13.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.13.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.13.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.13.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.13.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.13.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.13.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.13.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.13.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.13.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.13.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.13.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.13.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.13.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.13.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.14.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.14.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.14.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.14.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.14.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.14.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.14.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.14.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.14.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.14.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.14.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.14.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.14.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.14.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.14.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.14.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.15.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.15.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.15.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.15.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.15.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.15.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.15.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.15.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.15.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.15.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.15.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.15.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.15.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.15.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.15.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.15.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.16.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.16.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.16.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.16.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.16.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.16.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.16.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.16.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.16.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.16.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.16.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.16.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.16.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.16.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.16.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.16.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.17.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.17.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.17.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.17.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.17.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.17.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.17.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.17.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.17.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.17.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.17.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.17.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.17.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.17.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.17.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.17.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.18.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.18.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.18.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.18.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.18.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.18.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.18.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.18.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.18.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.18.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.18.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.18.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.18.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.18.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.18.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.18.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.19.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.19.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.19.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.19.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.19.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.19.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.19.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.19.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.19.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.19.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.19.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.19.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.19.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.19.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.19.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.19.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.20.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.20.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.20.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.20.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.20.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.20.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.20.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.20.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.20.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.20.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.20.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.20.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.20.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.20.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.20.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.20.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.21.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.21.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.21.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.21.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.21.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.21.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.21.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.21.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.21.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.21.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.21.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.21.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.21.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.21.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.21.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.21.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.22.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.22.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.22.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.22.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.22.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.22.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.22.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.22.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.22.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.22.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.22.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.22.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.22.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.22.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.22.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.22.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.23.attention.self.query.weight
+06/27 07:41:22 PM n: encoder.layer.23.attention.self.query.bias
+06/27 07:41:22 PM n: encoder.layer.23.attention.self.key.weight
+06/27 07:41:22 PM n: encoder.layer.23.attention.self.key.bias
+06/27 07:41:22 PM n: encoder.layer.23.attention.self.value.weight
+06/27 07:41:22 PM n: encoder.layer.23.attention.self.value.bias
+06/27 07:41:22 PM n: encoder.layer.23.attention.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.23.attention.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.23.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.23.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: encoder.layer.23.intermediate.dense.weight
+06/27 07:41:22 PM n: encoder.layer.23.intermediate.dense.bias
+06/27 07:41:22 PM n: encoder.layer.23.output.dense.weight
+06/27 07:41:22 PM n: encoder.layer.23.output.dense.bias
+06/27 07:41:22 PM n: encoder.layer.23.output.LayerNorm.weight
+06/27 07:41:22 PM n: encoder.layer.23.output.LayerNorm.bias
+06/27 07:41:22 PM n: pooler.dense.weight
+06/27 07:41:22 PM n: pooler.dense.bias
+06/27 07:41:22 PM n: roberta.embeddings.word_embeddings.weight
+06/27 07:41:22 PM n: roberta.embeddings.position_embeddings.weight
+06/27 07:41:22 PM n: roberta.embeddings.token_type_embeddings.weight
+06/27 07:41:22 PM n: roberta.embeddings.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.embeddings.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.0.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.0.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.0.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.0.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.0.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.0.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.0.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.0.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.0.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.0.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.0.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.0.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.0.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.0.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.0.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.0.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.1.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.1.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.1.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.1.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.1.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.1.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.1.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.1.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.1.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.1.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.1.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.1.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.1.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.1.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.1.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.1.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.2.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.2.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.2.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.2.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.2.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.2.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.2.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.2.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.2.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.2.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.2.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.2.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.2.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.2.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.2.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.2.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.3.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.3.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.3.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.3.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.3.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.3.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.3.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.3.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.3.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.3.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.3.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.3.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.3.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.3.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.3.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.3.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.4.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.4.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.4.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.4.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.4.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.4.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.4.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.4.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.4.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.4.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.4.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.4.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.4.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.4.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.4.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.4.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.5.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.5.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.5.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.5.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.5.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.5.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.5.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.5.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.5.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.5.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.5.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.5.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.5.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.5.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.5.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.5.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.6.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.6.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.6.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.6.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.6.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.6.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.6.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.6.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.6.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.6.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.6.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.6.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.6.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.6.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.6.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.6.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.7.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.7.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.7.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.7.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.7.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.7.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.7.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.7.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.7.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.7.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.7.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.7.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.7.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.7.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.7.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.7.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.8.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.8.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.8.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.8.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.8.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.8.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.8.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.8.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.8.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.8.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.8.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.8.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.8.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.8.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.8.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.8.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.9.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.9.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.9.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.9.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.9.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.9.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.9.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.9.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.9.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.9.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.9.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.9.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.9.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.9.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.9.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.9.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.10.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.10.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.10.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.10.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.10.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.10.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.10.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.10.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.10.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.10.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.10.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.10.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.10.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.10.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.10.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.10.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.11.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.11.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.11.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.11.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.11.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.11.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.11.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.11.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.11.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.11.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.11.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.11.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.11.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.11.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.11.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.11.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.12.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.12.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.12.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.12.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.12.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.12.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.12.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.12.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.12.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.12.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.12.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.12.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.12.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.12.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.12.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.12.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.13.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.13.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.13.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.13.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.13.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.13.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.13.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.13.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.13.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.13.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.13.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.13.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.13.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.13.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.13.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.13.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.14.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.14.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.14.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.14.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.14.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.14.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.14.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.14.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.14.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.14.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.14.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.14.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.14.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.14.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.14.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.14.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.15.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.15.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.15.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.15.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.15.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.15.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.15.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.15.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.15.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.15.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.15.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.15.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.15.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.15.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.15.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.15.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.16.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.16.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.16.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.16.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.16.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.16.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.16.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.16.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.16.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.16.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.16.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.16.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.16.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.16.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.16.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.16.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.17.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.17.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.17.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.17.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.17.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.17.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.17.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.17.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.17.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.17.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.17.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.17.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.17.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.17.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.17.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.17.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.18.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.18.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.18.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.18.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.18.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.18.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.18.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.18.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.18.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.18.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.18.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.18.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.18.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.18.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.18.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.18.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.19.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.19.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.19.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.19.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.19.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.19.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.19.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.19.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.19.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.19.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.19.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.19.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.19.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.19.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.19.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.19.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.20.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.20.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.20.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.20.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.20.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.20.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.20.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.20.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.20.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.20.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.20.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.20.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.20.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.20.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.20.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.20.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.21.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.21.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.21.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.21.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.21.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.21.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.21.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.21.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.21.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.21.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.21.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.21.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.21.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.21.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.21.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.21.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.22.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.22.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.22.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.22.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.22.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.22.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.22.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.22.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.22.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.22.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.22.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.22.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.22.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.22.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.22.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.22.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.23.attention.self.query.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.23.attention.self.query.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.23.attention.self.key.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.23.attention.self.key.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.23.attention.self.value.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.23.attention.self.value.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.23.attention.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.23.attention.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.23.attention.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.23.attention.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.23.intermediate.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.23.intermediate.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.23.output.dense.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.23.output.dense.bias
+06/27 07:41:22 PM n: roberta.encoder.layer.23.output.LayerNorm.weight
+06/27 07:41:22 PM n: roberta.encoder.layer.23.output.LayerNorm.bias
+06/27 07:41:22 PM n: roberta.pooler.dense.weight
+06/27 07:41:22 PM n: roberta.pooler.dense.bias
+06/27 07:41:22 PM n: lm_head.bias
+06/27 07:41:22 PM n: lm_head.dense.weight
+06/27 07:41:22 PM n: lm_head.dense.bias
+06/27 07:41:22 PM n: lm_head.layer_norm.weight
+06/27 07:41:22 PM n: lm_head.layer_norm.bias
+06/27 07:41:22 PM n: lm_head.decoder.weight
+06/27 07:41:22 PM Total parameters: 763292761
+06/27 07:41:22 PM ***** LOSS printing *****
+06/27 07:41:22 PM loss
+06/27 07:41:22 PM tensor(19.5183, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:41:23 PM ***** LOSS printing *****
+06/27 07:41:23 PM loss
+06/27 07:41:23 PM tensor(14.7077, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:41:23 PM ***** LOSS printing *****
+06/27 07:41:23 PM loss
+06/27 07:41:23 PM tensor(8.4557, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:41:23 PM ***** LOSS printing *****
+06/27 07:41:23 PM loss
+06/27 07:41:23 PM tensor(5.0656, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:41:23 PM ***** Running evaluation MLM *****
+06/27 07:41:23 PM   Epoch = 0 iter 4 step
+06/27 07:41:23 PM   Num examples = 16
+06/27 07:41:23 PM   Batch size = 32
+06/27 07:41:24 PM ***** Eval results *****
+06/27 07:41:24 PM   acc = 0.875
+06/27 07:41:24 PM   cls_loss = 11.936811447143555
+06/27 07:41:24 PM   eval_loss = 2.732952356338501
+06/27 07:41:24 PM   global_step = 4
+06/27 07:41:24 PM   loss = 11.936811447143555
+06/27 07:41:24 PM ***** Save model *****
+06/27 07:41:24 PM ***** Test Dataset Eval Result *****
+06/27 07:42:27 PM ***** Eval results *****
+06/27 07:42:27 PM   acc = 0.774
+06/27 07:42:27 PM   cls_loss = 11.936811447143555
+06/27 07:42:27 PM   eval_loss = 2.7983788460020036
+06/27 07:42:27 PM   global_step = 4
+06/27 07:42:27 PM   loss = 11.936811447143555
+06/27 07:42:31 PM ***** LOSS printing *****
+06/27 07:42:31 PM loss
+06/27 07:42:31 PM tensor(4.7537, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:42:31 PM ***** LOSS printing *****
+06/27 07:42:31 PM loss
+06/27 07:42:31 PM tensor(3.5946, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:42:32 PM ***** LOSS printing *****
+06/27 07:42:32 PM loss
+06/27 07:42:32 PM tensor(3.4368, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:42:32 PM ***** LOSS printing *****
+06/27 07:42:32 PM loss
+06/27 07:42:32 PM tensor(2.6047, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:42:32 PM ***** LOSS printing *****
+06/27 07:42:32 PM loss
+06/27 07:42:32 PM tensor(1.9554, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:42:32 PM ***** Running evaluation MLM *****
+06/27 07:42:32 PM   Epoch = 0 iter 9 step
+06/27 07:42:32 PM   Num examples = 16
+06/27 07:42:32 PM   Batch size = 32
+06/27 07:42:33 PM ***** Eval results *****
+06/27 07:42:33 PM   acc = 0.9375
+06/27 07:42:33 PM   cls_loss = 7.121387468443976
+06/27 07:42:33 PM   eval_loss = 1.3703784942626953
+06/27 07:42:33 PM   global_step = 9
+06/27 07:42:33 PM   loss = 7.121387468443976
+06/27 07:42:33 PM ***** Save model *****
+06/27 07:42:33 PM ***** Test Dataset Eval Result *****
+06/27 07:43:35 PM ***** Eval results *****
+06/27 07:43:35 PM   acc = 0.7555
+06/27 07:43:35 PM   cls_loss = 7.121387468443976
+06/27 07:43:35 PM   eval_loss = 1.4753190165474301
+06/27 07:43:35 PM   global_step = 9
+06/27 07:43:35 PM   loss = 7.121387468443976
+06/27 07:43:39 PM ***** LOSS printing *****
+06/27 07:43:39 PM loss
+06/27 07:43:39 PM tensor(2.0497, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:43:40 PM ***** LOSS printing *****
+06/27 07:43:40 PM loss
+06/27 07:43:40 PM tensor(2.8314, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:43:40 PM ***** LOSS printing *****
+06/27 07:43:40 PM loss
+06/27 07:43:40 PM tensor(5.4283, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:43:40 PM ***** LOSS printing *****
+06/27 07:43:40 PM loss
+06/27 07:43:40 PM tensor(1.9590, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:43:40 PM ***** LOSS printing *****
+06/27 07:43:40 PM loss
+06/27 07:43:40 PM tensor(1.2618, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:43:41 PM ***** Running evaluation MLM *****
+06/27 07:43:41 PM   Epoch = 1 iter 14 step
+06/27 07:43:41 PM   Num examples = 16
+06/27 07:43:41 PM   Batch size = 32
+06/27 07:43:41 PM ***** Eval results *****
+06/27 07:43:41 PM   acc = 1.0
+06/27 07:43:41 PM   cls_loss = 1.610443651676178
+06/27 07:43:41 PM   eval_loss = 1.1354162693023682
+06/27 07:43:41 PM   global_step = 14
+06/27 07:43:41 PM   loss = 1.610443651676178
+06/27 07:43:41 PM ***** Save model *****
+06/27 07:43:41 PM ***** Test Dataset Eval Result *****
+06/27 07:44:44 PM ***** Eval results *****
+06/27 07:44:44 PM   acc = 0.905
+06/27 07:44:44 PM   cls_loss = 1.610443651676178
+06/27 07:44:44 PM   eval_loss = 1.2926717447856115
+06/27 07:44:44 PM   global_step = 14
+06/27 07:44:44 PM   loss = 1.610443651676178
+06/27 07:44:48 PM ***** LOSS printing *****
+06/27 07:44:48 PM loss
+06/27 07:44:48 PM tensor(1.5591, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:48 PM ***** LOSS printing *****
+06/27 07:44:48 PM loss
+06/27 07:44:48 PM tensor(1.7429, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:48 PM ***** LOSS printing *****
+06/27 07:44:48 PM loss
+06/27 07:44:48 PM tensor(2.3199, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:49 PM ***** LOSS printing *****
+06/27 07:44:49 PM loss
+06/27 07:44:49 PM tensor(1.9172, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:49 PM ***** LOSS printing *****
+06/27 07:44:49 PM loss
+06/27 07:44:49 PM tensor(2.5997, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:49 PM ***** Running evaluation MLM *****
+06/27 07:44:49 PM   Epoch = 1 iter 19 step
+06/27 07:44:49 PM   Num examples = 16
+06/27 07:44:49 PM   Batch size = 32
+06/27 07:44:50 PM ***** Eval results *****
+06/27 07:44:50 PM   acc = 1.0
+06/27 07:44:50 PM   cls_loss = 1.9085171903882707
+06/27 07:44:50 PM   eval_loss = 2.54118013381958
+06/27 07:44:50 PM   global_step = 19
+06/27 07:44:50 PM   loss = 1.9085171903882707
+06/27 07:44:50 PM ***** LOSS printing *****
+06/27 07:44:50 PM loss
+06/27 07:44:50 PM tensor(1.7135, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:50 PM ***** LOSS printing *****
+06/27 07:44:50 PM loss
+06/27 07:44:50 PM tensor(2.4878, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:50 PM ***** LOSS printing *****
+06/27 07:44:50 PM loss
+06/27 07:44:50 PM tensor(1.5792, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:50 PM ***** LOSS printing *****
+06/27 07:44:50 PM loss
+06/27 07:44:50 PM tensor(2.3043, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:50 PM ***** LOSS printing *****
+06/27 07:44:50 PM loss
+06/27 07:44:50 PM tensor(2.2466, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:51 PM ***** Running evaluation MLM *****
+06/27 07:44:51 PM   Epoch = 1 iter 24 step
+06/27 07:44:51 PM   Num examples = 16
+06/27 07:44:51 PM   Batch size = 32
+06/27 07:44:51 PM ***** Eval results *****
+06/27 07:44:51 PM   acc = 0.75
+06/27 07:44:51 PM   cls_loss = 1.9742497305075328
+06/27 07:44:51 PM   eval_loss = 1.7207977771759033
+06/27 07:44:51 PM   global_step = 24
+06/27 07:44:51 PM   loss = 1.9742497305075328
+06/27 07:44:51 PM ***** LOSS printing *****
+06/27 07:44:51 PM loss
+06/27 07:44:51 PM tensor(1.2222, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:51 PM ***** LOSS printing *****
+06/27 07:44:51 PM loss
+06/27 07:44:51 PM tensor(3.3337, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:52 PM ***** LOSS printing *****
+06/27 07:44:52 PM loss
+06/27 07:44:52 PM tensor(1.9211, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:52 PM ***** LOSS printing *****
+06/27 07:44:52 PM loss
+06/27 07:44:52 PM tensor(0.9920, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:52 PM ***** LOSS printing *****
+06/27 07:44:52 PM loss
+06/27 07:44:52 PM tensor(1.4443, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:52 PM ***** Running evaluation MLM *****
+06/27 07:44:52 PM   Epoch = 2 iter 29 step
+06/27 07:44:52 PM   Num examples = 16
+06/27 07:44:52 PM   Batch size = 32
+06/27 07:44:53 PM ***** Eval results *****
+06/27 07:44:53 PM   acc = 0.875
+06/27 07:44:53 PM   cls_loss = 1.7826941728591919
+06/27 07:44:53 PM   eval_loss = 1.1031626462936401
+06/27 07:44:53 PM   global_step = 29
+06/27 07:44:53 PM   loss = 1.7826941728591919
+06/27 07:44:53 PM ***** LOSS printing *****
+06/27 07:44:53 PM loss
+06/27 07:44:53 PM tensor(2.4551, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:53 PM ***** LOSS printing *****
+06/27 07:44:53 PM loss
+06/27 07:44:53 PM tensor(0.7155, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:53 PM ***** LOSS printing *****
+06/27 07:44:53 PM loss
+06/27 07:44:53 PM tensor(1.9814, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:53 PM ***** LOSS printing *****
+06/27 07:44:53 PM loss
+06/27 07:44:53 PM tensor(2.4263, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:54 PM ***** LOSS printing *****
+06/27 07:44:54 PM loss
+06/27 07:44:54 PM tensor(1.8626, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:54 PM ***** Running evaluation MLM *****
+06/27 07:44:54 PM   Epoch = 2 iter 34 step
+06/27 07:44:54 PM   Num examples = 16
+06/27 07:44:54 PM   Batch size = 32
+06/27 07:44:54 PM ***** Eval results *****
+06/27 07:44:54 PM   acc = 0.9375
+06/27 07:44:54 PM   cls_loss = 1.8354307234287262
+06/27 07:44:54 PM   eval_loss = 1.3872618675231934
+06/27 07:44:54 PM   global_step = 34
+06/27 07:44:54 PM   loss = 1.8354307234287262
+06/27 07:44:54 PM ***** LOSS printing *****
+06/27 07:44:54 PM loss
+06/27 07:44:54 PM tensor(1.4169, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:55 PM ***** LOSS printing *****
+06/27 07:44:55 PM loss
+06/27 07:44:55 PM tensor(1.4372, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:55 PM ***** LOSS printing *****
+06/27 07:44:55 PM loss
+06/27 07:44:55 PM tensor(1.5754, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:55 PM ***** LOSS printing *****
+06/27 07:44:55 PM loss
+06/27 07:44:55 PM tensor(1.5370, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:55 PM ***** LOSS printing *****
+06/27 07:44:55 PM loss
+06/27 07:44:55 PM tensor(1.5334, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:55 PM ***** Running evaluation MLM *****
+06/27 07:44:55 PM   Epoch = 3 iter 39 step
+06/27 07:44:55 PM   Num examples = 16
+06/27 07:44:55 PM   Batch size = 32
+06/27 07:44:56 PM ***** Eval results *****
+06/27 07:44:56 PM   acc = 0.875
+06/27 07:44:56 PM   cls_loss = 1.5485987663269043
+06/27 07:44:56 PM   eval_loss = 2.184830665588379
+06/27 07:44:56 PM   global_step = 39
+06/27 07:44:56 PM   loss = 1.5485987663269043
+06/27 07:44:56 PM ***** LOSS printing *****
+06/27 07:44:56 PM loss
+06/27 07:44:56 PM tensor(2.0967, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:56 PM ***** LOSS printing *****
+06/27 07:44:56 PM loss
+06/27 07:44:56 PM tensor(1.7499, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:56 PM ***** LOSS printing *****
+06/27 07:44:56 PM loss
+06/27 07:44:56 PM tensor(1.5346, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:57 PM ***** LOSS printing *****
+06/27 07:44:57 PM loss
+06/27 07:44:57 PM tensor(1.7934, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:57 PM ***** LOSS printing *****
+06/27 07:44:57 PM loss
+06/27 07:44:57 PM tensor(1.2444, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:57 PM ***** Running evaluation MLM *****
+06/27 07:44:57 PM   Epoch = 3 iter 44 step
+06/27 07:44:57 PM   Num examples = 16
+06/27 07:44:57 PM   Batch size = 32
+06/27 07:44:58 PM ***** Eval results *****
+06/27 07:44:58 PM   acc = 0.875
+06/27 07:44:58 PM   cls_loss = 1.633103832602501
+06/27 07:44:58 PM   eval_loss = 1.4276845455169678
+06/27 07:44:58 PM   global_step = 44
+06/27 07:44:58 PM   loss = 1.633103832602501
+06/27 07:44:58 PM ***** LOSS printing *****
+06/27 07:44:58 PM loss
+06/27 07:44:58 PM tensor(1.4683, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:58 PM ***** LOSS printing *****
+06/27 07:44:58 PM loss
+06/27 07:44:58 PM tensor(1.5061, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:58 PM ***** LOSS printing *****
+06/27 07:44:58 PM loss
+06/27 07:44:58 PM tensor(1.2998, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:58 PM ***** LOSS printing *****
+06/27 07:44:58 PM loss
+06/27 07:44:58 PM tensor(1.6021, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:59 PM ***** LOSS printing *****
+06/27 07:44:59 PM loss
+06/27 07:44:59 PM tensor(1.2090, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:59 PM ***** Running evaluation MLM *****
+06/27 07:44:59 PM   Epoch = 4 iter 49 step
+06/27 07:44:59 PM   Num examples = 16
+06/27 07:44:59 PM   Batch size = 32
+06/27 07:44:59 PM ***** Eval results *****
+06/27 07:44:59 PM   acc = 0.9375
+06/27 07:44:59 PM   cls_loss = 1.208958387374878
+06/27 07:44:59 PM   eval_loss = 1.1357319355010986
+06/27 07:44:59 PM   global_step = 49
+06/27 07:44:59 PM   loss = 1.208958387374878
+06/27 07:44:59 PM ***** LOSS printing *****
+06/27 07:44:59 PM loss
+06/27 07:44:59 PM tensor(1.2661, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:44:59 PM ***** LOSS printing *****
+06/27 07:44:59 PM loss
+06/27 07:44:59 PM tensor(1.0545, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:00 PM ***** LOSS printing *****
+06/27 07:45:00 PM loss
+06/27 07:45:00 PM tensor(1.4010, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:00 PM ***** LOSS printing *****
+06/27 07:45:00 PM loss
+06/27 07:45:00 PM tensor(1.6452, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:00 PM ***** LOSS printing *****
+06/27 07:45:00 PM loss
+06/27 07:45:00 PM tensor(1.1014, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:00 PM ***** Running evaluation MLM *****
+06/27 07:45:00 PM   Epoch = 4 iter 54 step
+06/27 07:45:00 PM   Num examples = 16
+06/27 07:45:00 PM   Batch size = 32
+06/27 07:45:01 PM ***** Eval results *****
+06/27 07:45:01 PM   acc = 1.0
+06/27 07:45:01 PM   cls_loss = 1.2795304258664448
+06/27 07:45:01 PM   eval_loss = 0.9247905611991882
+06/27 07:45:01 PM   global_step = 54
+06/27 07:45:01 PM   loss = 1.2795304258664448
+06/27 07:45:01 PM ***** LOSS printing *****
+06/27 07:45:01 PM loss
+06/27 07:45:01 PM tensor(0.9262, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:01 PM ***** LOSS printing *****
+06/27 07:45:01 PM loss
+06/27 07:45:01 PM tensor(1.8235, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:01 PM ***** LOSS printing *****
+06/27 07:45:01 PM loss
+06/27 07:45:01 PM tensor(1.8736, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:02 PM ***** LOSS printing *****
+06/27 07:45:02 PM loss
+06/27 07:45:02 PM tensor(1.4635, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:02 PM ***** LOSS printing *****
+06/27 07:45:02 PM loss
+06/27 07:45:02 PM tensor(1.4990, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:02 PM ***** Running evaluation MLM *****
+06/27 07:45:02 PM   Epoch = 4 iter 59 step
+06/27 07:45:02 PM   Num examples = 16
+06/27 07:45:02 PM   Batch size = 32
+06/27 07:45:02 PM ***** Eval results *****
+06/27 07:45:02 PM   acc = 1.0
+06/27 07:45:02 PM   cls_loss = 1.3875367858193137
+06/27 07:45:02 PM   eval_loss = 1.0612810850143433
+06/27 07:45:02 PM   global_step = 59
+06/27 07:45:02 PM   loss = 1.3875367858193137
+06/27 07:45:02 PM ***** LOSS printing *****
+06/27 07:45:02 PM loss
+06/27 07:45:02 PM tensor(1.6880, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:03 PM ***** LOSS printing *****
+06/27 07:45:03 PM loss
+06/27 07:45:03 PM tensor(0.8989, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:03 PM ***** LOSS printing *****
+06/27 07:45:03 PM loss
+06/27 07:45:03 PM tensor(1.1756, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:03 PM ***** LOSS printing *****
+06/27 07:45:03 PM loss
+06/27 07:45:03 PM tensor(1.2151, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:03 PM ***** LOSS printing *****
+06/27 07:45:03 PM loss
+06/27 07:45:03 PM tensor(1.5719, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:04 PM ***** Running evaluation MLM *****
+06/27 07:45:04 PM   Epoch = 5 iter 64 step
+06/27 07:45:04 PM   Num examples = 16
+06/27 07:45:04 PM   Batch size = 32
+06/27 07:45:04 PM ***** Eval results *****
+06/27 07:45:04 PM   acc = 0.9375
+06/27 07:45:04 PM   cls_loss = 1.2153718173503876
+06/27 07:45:04 PM   eval_loss = 1.4014720916748047
+06/27 07:45:04 PM   global_step = 64
+06/27 07:45:04 PM   loss = 1.2153718173503876
+06/27 07:45:04 PM ***** LOSS printing *****
+06/27 07:45:04 PM loss
+06/27 07:45:04 PM tensor(1.6161, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:04 PM ***** LOSS printing *****
+06/27 07:45:04 PM loss
+06/27 07:45:04 PM tensor(1.3287, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:05 PM ***** LOSS printing *****
+06/27 07:45:05 PM loss
+06/27 07:45:05 PM tensor(1.3660, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:05 PM ***** LOSS printing *****
+06/27 07:45:05 PM loss
+06/27 07:45:05 PM tensor(0.8909, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:05 PM ***** LOSS printing *****
+06/27 07:45:05 PM loss
+06/27 07:45:05 PM tensor(1.4805, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:05 PM ***** Running evaluation MLM *****
+06/27 07:45:05 PM   Epoch = 5 iter 69 step
+06/27 07:45:05 PM   Num examples = 16
+06/27 07:45:05 PM   Batch size = 32
+06/27 07:45:06 PM ***** Eval results *****
+06/27 07:45:06 PM   acc = 0.9375
+06/27 07:45:06 PM   cls_loss = 1.2826526628600226
+06/27 07:45:06 PM   eval_loss = 2.240274429321289
+06/27 07:45:06 PM   global_step = 69
+06/27 07:45:06 PM   loss = 1.2826526628600226
+06/27 07:45:06 PM ***** LOSS printing *****
+06/27 07:45:06 PM loss
+06/27 07:45:06 PM tensor(1.8157, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:06 PM ***** LOSS printing *****
+06/27 07:45:06 PM loss
+06/27 07:45:06 PM tensor(1.8313, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:06 PM ***** LOSS printing *****
+06/27 07:45:06 PM loss
+06/27 07:45:06 PM tensor(1.3024, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:06 PM ***** LOSS printing *****
+06/27 07:45:06 PM loss
+06/27 07:45:06 PM tensor(1.7641, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:07 PM ***** LOSS printing *****
+06/27 07:45:07 PM loss
+06/27 07:45:07 PM tensor(1.3144, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:07 PM ***** Running evaluation MLM *****
+06/27 07:45:07 PM   Epoch = 6 iter 74 step
+06/27 07:45:07 PM   Num examples = 16
+06/27 07:45:07 PM   Batch size = 32
+06/27 07:45:07 PM ***** Eval results *****
+06/27 07:45:07 PM   acc = 0.9375
+06/27 07:45:07 PM   cls_loss = 1.5392718315124512
+06/27 07:45:07 PM   eval_loss = 2.065387725830078
+06/27 07:45:07 PM   global_step = 74
+06/27 07:45:07 PM   loss = 1.5392718315124512
+06/27 07:45:07 PM ***** LOSS printing *****
+06/27 07:45:07 PM loss
+06/27 07:45:07 PM tensor(0.9130, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:08 PM ***** LOSS printing *****
+06/27 07:45:08 PM loss
+06/27 07:45:08 PM tensor(1.4541, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:08 PM ***** LOSS printing *****
+06/27 07:45:08 PM loss
+06/27 07:45:08 PM tensor(1.7545, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:08 PM ***** LOSS printing *****
+06/27 07:45:08 PM loss
+06/27 07:45:08 PM tensor(1.8459, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:08 PM ***** LOSS printing *****
+06/27 07:45:08 PM loss
+06/27 07:45:08 PM tensor(1.0856, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:08 PM ***** Running evaluation MLM *****
+06/27 07:45:08 PM   Epoch = 6 iter 79 step
+06/27 07:45:08 PM   Num examples = 16
+06/27 07:45:08 PM   Batch size = 32
+06/27 07:45:09 PM ***** Eval results *****
+06/27 07:45:09 PM   acc = 0.9375
+06/27 07:45:09 PM   cls_loss = 1.4473692689623152
+06/27 07:45:09 PM   eval_loss = 1.578794002532959
+06/27 07:45:09 PM   global_step = 79
+06/27 07:45:09 PM   loss = 1.4473692689623152
+06/27 07:45:09 PM ***** LOSS printing *****
+06/27 07:45:09 PM loss
+06/27 07:45:09 PM tensor(1.2524, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:09 PM ***** LOSS printing *****
+06/27 07:45:09 PM loss
+06/27 07:45:09 PM tensor(1.4837, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:09 PM ***** LOSS printing *****
+06/27 07:45:09 PM loss
+06/27 07:45:09 PM tensor(1.3333, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:10 PM ***** LOSS printing *****
+06/27 07:45:10 PM loss
+06/27 07:45:10 PM tensor(1.3101, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:10 PM ***** LOSS printing *****
+06/27 07:45:10 PM loss
+06/27 07:45:10 PM tensor(1.5274, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:10 PM ***** Running evaluation MLM *****
+06/27 07:45:10 PM   Epoch = 6 iter 84 step
+06/27 07:45:10 PM   Num examples = 16
+06/27 07:45:10 PM   Batch size = 32
+06/27 07:45:10 PM ***** Eval results *****
+06/27 07:45:10 PM   acc = 0.9375
+06/27 07:45:10 PM   cls_loss = 1.4198738535245259
+06/27 07:45:10 PM   eval_loss = 1.321185827255249
+06/27 07:45:10 PM   global_step = 84
+06/27 07:45:10 PM   loss = 1.4198738535245259
+06/27 07:45:11 PM ***** LOSS printing *****
+06/27 07:45:11 PM loss
+06/27 07:45:11 PM tensor(1.1958, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:11 PM ***** LOSS printing *****
+06/27 07:45:11 PM loss
+06/27 07:45:11 PM tensor(1.1229, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:11 PM ***** LOSS printing *****
+06/27 07:45:11 PM loss
+06/27 07:45:11 PM tensor(0.8938, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:11 PM ***** LOSS printing *****
+06/27 07:45:11 PM loss
+06/27 07:45:11 PM tensor(1.5412, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:11 PM ***** LOSS printing *****
+06/27 07:45:11 PM loss
+06/27 07:45:11 PM tensor(1.5722, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:12 PM ***** Running evaluation MLM *****
+06/27 07:45:12 PM   Epoch = 7 iter 89 step
+06/27 07:45:12 PM   Num examples = 16
+06/27 07:45:12 PM   Batch size = 32
+06/27 07:45:12 PM ***** Eval results *****
+06/27 07:45:12 PM   acc = 1.0
+06/27 07:45:12 PM   cls_loss = 1.2651854276657104
+06/27 07:45:12 PM   eval_loss = 0.6386899948120117
+06/27 07:45:12 PM   global_step = 89
+06/27 07:45:12 PM   loss = 1.2651854276657104
+06/27 07:45:12 PM ***** LOSS printing *****
+06/27 07:45:12 PM loss
+06/27 07:45:12 PM tensor(1.4018, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:12 PM ***** LOSS printing *****
+06/27 07:45:12 PM loss
+06/27 07:45:12 PM tensor(1.2518, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:13 PM ***** LOSS printing *****
+06/27 07:45:13 PM loss
+06/27 07:45:13 PM tensor(0.8772, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:13 PM ***** LOSS printing *****
+06/27 07:45:13 PM loss
+06/27 07:45:13 PM tensor(1.3889, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:13 PM ***** LOSS printing *****
+06/27 07:45:13 PM loss
+06/27 07:45:13 PM tensor(1.2508, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:13 PM ***** Running evaluation MLM *****
+06/27 07:45:13 PM   Epoch = 7 iter 94 step
+06/27 07:45:13 PM   Num examples = 16
+06/27 07:45:13 PM   Batch size = 32
+06/27 07:45:14 PM ***** Eval results *****
+06/27 07:45:14 PM   acc = 1.0
+06/27 07:45:14 PM   cls_loss = 1.2496417760849
+06/27 07:45:14 PM   eval_loss = 0.6527448296546936
+06/27 07:45:14 PM   global_step = 94
+06/27 07:45:14 PM   loss = 1.2496417760849
+06/27 07:45:14 PM ***** LOSS printing *****
+06/27 07:45:14 PM loss
+06/27 07:45:14 PM tensor(1.6673, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:14 PM ***** LOSS printing *****
+06/27 07:45:14 PM loss
+06/27 07:45:14 PM tensor(1.8130, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:14 PM ***** LOSS printing *****
+06/27 07:45:14 PM loss
+06/27 07:45:14 PM tensor(1.2206, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:14 PM ***** LOSS printing *****
+06/27 07:45:14 PM loss
+06/27 07:45:14 PM tensor(1.1809, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:15 PM ***** LOSS printing *****
+06/27 07:45:15 PM loss
+06/27 07:45:15 PM tensor(0.9157, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:15 PM ***** Running evaluation MLM *****
+06/27 07:45:15 PM   Epoch = 8 iter 99 step
+06/27 07:45:15 PM   Num examples = 16
+06/27 07:45:15 PM   Batch size = 32
+06/27 07:45:15 PM ***** Eval results *****
+06/27 07:45:15 PM   acc = 1.0
+06/27 07:45:15 PM   cls_loss = 1.1057422558466594
+06/27 07:45:15 PM   eval_loss = 1.5372668504714966
+06/27 07:45:15 PM   global_step = 99
+06/27 07:45:15 PM   loss = 1.1057422558466594
+06/27 07:45:15 PM ***** LOSS printing *****
+06/27 07:45:15 PM loss
+06/27 07:45:15 PM tensor(2.1333, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:16 PM ***** LOSS printing *****
+06/27 07:45:16 PM loss
+06/27 07:45:16 PM tensor(1.3103, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:16 PM ***** LOSS printing *****
+06/27 07:45:16 PM loss
+06/27 07:45:16 PM tensor(2.5413, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:16 PM ***** LOSS printing *****
+06/27 07:45:16 PM loss
+06/27 07:45:16 PM tensor(0.9608, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:16 PM ***** LOSS printing *****
+06/27 07:45:16 PM loss
+06/27 07:45:16 PM tensor(1.8145, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:16 PM ***** Running evaluation MLM *****
+06/27 07:45:16 PM   Epoch = 8 iter 104 step
+06/27 07:45:16 PM   Num examples = 16
+06/27 07:45:16 PM   Batch size = 32
+06/27 07:45:17 PM ***** Eval results *****
+06/27 07:45:17 PM   acc = 1.0
+06/27 07:45:17 PM   cls_loss = 1.5096825957298279
+06/27 07:45:17 PM   eval_loss = 1.782776951789856
+06/27 07:45:17 PM   global_step = 104
+06/27 07:45:17 PM   loss = 1.5096825957298279
+06/27 07:45:17 PM ***** LOSS printing *****
+06/27 07:45:17 PM loss
+06/27 07:45:17 PM tensor(0.8409, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:17 PM ***** LOSS printing *****
+06/27 07:45:17 PM loss
+06/27 07:45:17 PM tensor(1.8083, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:17 PM ***** LOSS printing *****
+06/27 07:45:17 PM loss
+06/27 07:45:17 PM tensor(1.6434, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:18 PM ***** LOSS printing *****
+06/27 07:45:18 PM loss
+06/27 07:45:18 PM tensor(1.1884, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:18 PM ***** LOSS printing *****
+06/27 07:45:18 PM loss
+06/27 07:45:18 PM tensor(1.1591, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:18 PM ***** Running evaluation MLM *****
+06/27 07:45:18 PM   Epoch = 9 iter 109 step
+06/27 07:45:18 PM   Num examples = 16
+06/27 07:45:18 PM   Batch size = 32
+06/27 07:45:19 PM ***** Eval results *****
+06/27 07:45:19 PM   acc = 1.0
+06/27 07:45:19 PM   cls_loss = 1.1591038703918457
+06/27 07:45:19 PM   eval_loss = 1.5657563209533691
+06/27 07:45:19 PM   global_step = 109
+06/27 07:45:19 PM   loss = 1.1591038703918457
+06/27 07:45:19 PM ***** LOSS printing *****
+06/27 07:45:19 PM loss
+06/27 07:45:19 PM tensor(0.8702, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:19 PM ***** LOSS printing *****
+06/27 07:45:19 PM loss
+06/27 07:45:19 PM tensor(1.5427, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:19 PM ***** LOSS printing *****
+06/27 07:45:19 PM loss
+06/27 07:45:19 PM tensor(1.2756, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:19 PM ***** LOSS printing *****
+06/27 07:45:19 PM loss
+06/27 07:45:19 PM tensor(1.2726, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:19 PM ***** LOSS printing *****
+06/27 07:45:19 PM loss
+06/27 07:45:19 PM tensor(1.2109, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:20 PM ***** Running evaluation MLM *****
+06/27 07:45:20 PM   Epoch = 9 iter 114 step
+06/27 07:45:20 PM   Num examples = 16
+06/27 07:45:20 PM   Batch size = 32
+06/27 07:45:20 PM ***** Eval results *****
+06/27 07:45:20 PM   acc = 1.0
+06/27 07:45:20 PM   cls_loss = 1.2218581239382427
+06/27 07:45:20 PM   eval_loss = 1.0369969606399536
+06/27 07:45:20 PM   global_step = 114
+06/27 07:45:20 PM   loss = 1.2218581239382427
+06/27 07:45:20 PM ***** LOSS printing *****
+06/27 07:45:20 PM loss
+06/27 07:45:20 PM tensor(1.2295, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:20 PM ***** LOSS printing *****
+06/27 07:45:20 PM loss
+06/27 07:45:20 PM tensor(1.2191, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:21 PM ***** LOSS printing *****
+06/27 07:45:21 PM loss
+06/27 07:45:21 PM tensor(1.0670, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:21 PM ***** LOSS printing *****
+06/27 07:45:21 PM loss
+06/27 07:45:21 PM tensor(1.0314, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:21 PM ***** LOSS printing *****
+06/27 07:45:21 PM loss
+06/27 07:45:21 PM tensor(1.5661, device='cuda:0', grad_fn=<NllLossBackward0>)
+06/27 07:45:21 PM ***** Running evaluation MLM *****
+06/27 07:45:21 PM   Epoch = 9 iter 119 step
+06/27 07:45:21 PM   Num examples = 16
+06/27 07:45:21 PM   Batch size = 32
+06/27 07:45:22 PM ***** Eval results *****
+06/27 07:45:22 PM   acc = 1.0
+06/27 07:45:22 PM   cls_loss = 1.2221995158628984
+06/27 07:45:22 PM   eval_loss = 0.9213513731956482
+06/27 07:45:22 PM   global_step = 119
+06/27 07:45:22 PM   loss = 1.2221995158628984
+06/27 07:45:22 PM ***** LOSS printing *****
+06/27 07:45:22 PM loss
+06/27 07:45:22 PM tensor(1.6028, device='cuda:0', grad_fn=<NllLossBackward0>)

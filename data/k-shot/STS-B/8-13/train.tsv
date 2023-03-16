@@ -1,0 +1,17 @@
+index	genre	filename	year	old_index	source1	source2	sentence1	sentence2	score
+1016	main-captions	images	2014	0024	none	none	sheep standing in afield.	A sheep grazing in a field.	3.2
+2506	main-news	MSRpar	2012test	0095	none	none	She said he persisted and she eventually allowed him to fix her bike while she sat in the front seat of his car.	She said she eventually allowed him to fix her bike while she sat in his car, and they chatted.	3.875
+2073	main-forum	deft-forum	2014	0073	none	none	No extortion, no bribery, no money involved He's asking for money for his vote.	No extortion, no bribery, no money involved Only class E felonies.	3.8
+645	main-captions	MSRvid	2012train	0223	none	none	a group of people dancing	A group of men are dancing.	3.400
+19	main-captions	MSRvid	2012test	0029	none	none	The man is riding a horse.	A man is riding on a horse.	5.000
+1075	main-captions	images	2014	0102	none	none	A red moped parked on a sidewalk in front of graffiti.	The red scooter is sitting on the street in front of the building.	3.6
+414	main-captions	MSRvid	2012test	0624	none	none	A man is playing the guitar.	The man played his guitar with a friend.	3.200
+3344	main-news	MSRpar	2012train	0603	none	none	The witness, a 27-year-old Kosovan parking attendant with criminal convictions for dishonesty, was paid 10,000 by the News of the World.	The witness was a 27-year-old Kosovan parking attendant, who was paid by the News of the World, the court heard.	3.625
+5034	main-news	headlines	2015	0205	none	none	Glasgow helicopter death toll rises to nine	Earthquake death toll rises to 260	0.60
+518	main-captions	MSRvid	2012train	0043	none	none	A man is playing a flute.	A man is playing a guitar.	2.000
+4313	main-news	headlines	2013	0706	none	none	Usain Bolt wins 200m – Steven Howard reaction	Facebook mobile gains drive revenue growth: reaction	0.2
+483	main-captions	MSRvid	2012test	0731	none	none	A cat is licking himself.	A man is slicing a white onion with a mandolin slicer.	0.000
+4337	main-news	headlines	2013	0737	none	none	Barack Obama admits US has 'more nuclear weapons than we need'	French gunman wants to 'die with weapons in hands'	0.4
+4728	main-news	headlines	2014	0471	none	none	UK confirms fears over Syria's chemical weapons	End 'near' for Syria's chemical weapons	1.4
+176	main-captions	MSRvid	2012test	0260	none	none	Three women are dancing.	The man is dancing.	1.600
+2141	main-forum	deft-forum	2014	0141	none	none	I've never accused him of over-milligraming, nothing.	I've never accused him of doctoring a baseball.	0.4

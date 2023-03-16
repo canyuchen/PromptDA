@@ -1,0 +1,17 @@
+index	genre	filename	year	old_index	source1	source2	sentence1	sentence2	score
+2655	main-news	MSRpar	2012test	0324	none	none	A judge ordered the child placed in state custody Aug. 8.	On Aug. 8, Juvenile Court Judge Robert Yeates ordered that Parker be placed in protective custody.	3.200
+3884	main-news	headlines	2013	0169	none	none	Syrian forces launch new attacks	Syria forces launch Aleppo attack	3.4
+4002	main-news	headlines	2013	0314	none	none	Palestinians: 2 Gaza militants killed in Israeli airstrike on coastal strip	Officials: Gaza man killed in Israeli airstrike (AP)	3
+1571	main-captions	images	2015	0232	none	none	a boy jumps into the blue pool water.	The young boy is jumping into the pool on his belly.	3.40
+5639	main-news	headlines	2016	0751	Europe Media Monitor (http://emm.newsbrief.eu)	Europe Media Monitor (http://emm.newsbrief.eu)	World Cup hit by new stadium death	Worker dies at World Cup stadium	3
+1978	main-captions	images	2015	1434	none	none	Two kids are walking on a path in the woods.	Two children walking down a path in the woods.	5.00
+1009	main-captions	images	2014	0012	none	none	A jockey riding a horse.	A jockey riding a horse in a pen.	3.8
+4364	main-news	headlines	2014	0020	none	none	100 killed in new Darfur tribal clashes	'9 Dead' in New Darfur Tribal Clash	2.8
+334	main-captions	MSRvid	2012test	0499	none	none	A woman is slicing octopus.	A man is playing the guitar.	0.000
+4123	main-news	headlines	2013	0461	none	none	Yemen Suicide Blast, Drone Attack Kill At Least 30	Spate of Iraq attacks kill at least six	1
+1404	main-captions	images	2014	0600	none	none	A black and white photo of a love seat.	A black and white photo of a bicycle.	1.8
+555	main-captions	MSRvid	2012train	0091	none	none	A woman is cutting an onion.	A man is chopping an onion.	2.000
+699	main-captions	MSRvid	2012train	0293	none	none	A woman is dancing in the rain.	A woman is adding oil to a dish.	0.250
+3861	main-news	headlines	2013	0140	none	none	Erdogan and Putin talked in raised voice	Foreign militants killed in Somalia in strike on car	0
+4908	main-news	headlines	2014	0696	none	none	RF FM urges Syrian opposition to assist in immediate release of all foreigners captured in Syria	S Korea opposition candidate closes poll gap	0.6
+4225	main-news	headlines	2013	0593	none	none	Aust shares up 1% after interest rate cut	RBA delivers another rate cut	1
