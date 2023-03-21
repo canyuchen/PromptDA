@@ -50,6 +50,7 @@ It is worth noting that the results of our automatic label augmentation on `CoLA
 
 
 ## Citation
+If you find our code useful, we will greatly appreacite it if you consider citing our paper:
 ```
 @article{chen2022promptda,
   title   = {PromptDA: Label-guided Data Augmentation for Prompt-based Few Shot Learners},
@@ -61,8 +62,7 @@ It is worth noting that the results of our automatic label augmentation on `CoLA
 
 ## Acknowledgement
 
-Our Label Augmentation method is modified based on the code of Making Pre-trained Language Models Better Few-shot Learners ([LM-BFF](https://github.com/princeton-nlp/LM-BFF), ACL 2021)
-Thanks to the authors!
+Our Label Augmentation method is modified based on the code of Making Pre-trained Language Models Better Few-shot Learners ([LM-BFF](https://github.com/princeton-nlp/LM-BFF), ACL 2021). Thanks to the authors!
 
 
 
