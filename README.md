@@ -27,12 +27,12 @@ Reproduce the results for standard prompt tuning with template:
 cd test_standard_with_template
 sh test.sh
 ```
-Reproduce the results for prompt tuning + PromptDA with manual label augmentation:
+Reproduce the results for prompt tuning with template + PromptDA with manual label augmentation:
 ```bash
 cd test_promptda_template_manual
 sh test.sh
 ```
-Reproduce the results for prompt tuning + PromptDA with automatic label augmentation:
+Reproduce the results for prompt tuning with template + PromptDA with automatic label augmentation:
 ```bash
 cd test_promptda_template
 sh test.sh
@@ -47,6 +47,9 @@ cd LM-BFF/tools
 sh run_generate_labels.sh
 ```
 It is worth noting that the results of our automatic label augmentation on `CoLA`, `CR`, `MR`, `MPQA`, `SST-2`, `SST-5`, `SUBJ` datasets are recorded in the files in `LM-BFF/my_auto_label_mapping/manual_template`.
+
+## Results
+<img src="./image/result.jpg" width="700">  
 
 
 ## Citation
