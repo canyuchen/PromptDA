@@ -50,7 +50,7 @@ It is worth noting that the results of our automatic label augmentation on `CoLA
 
 
 ## Citation
-If you find our code useful, we will greatly appreacite it if you consider citing our paper:
+If you find our code useful, we will greatly appreacite it if you could consider citing our paper:
 ```
 @article{chen2022promptda,
   title   = {PromptDA: Label-guided Data Augmentation for Prompt-based Few Shot Learners},
