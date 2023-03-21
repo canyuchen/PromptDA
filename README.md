@@ -11,7 +11,7 @@ The basic comparison of conventional data augmentation methods **Synonym Substit
 
 
 ## Framework
-<img src="./image/image1.jpg" width="700">    
+<img src="./image/image1.jpg" width="800">    
 
 The proposed **PromptDA** for few-shot learning (with sentiment classification task as an example): (a) **Label Augmentation**: deriving multiple label words for each class to enrich the label semantic space; (b) **Augmented Prompt-based Tuning**: training with the augmented instance-label pairs via masked language modeling; (c) **Prediction Transformation**:  aggregating  the probability scores on the derived label words for the final prediction. 
 
@@ -49,7 +49,7 @@ sh run_generate_labels.sh
 It is worth noting that the results of our automatic label augmentation on `CoLA`, `CR`, `MR`, `MPQA`, `SST-2`, `SST-5`, `SUBJ` datasets are recorded in the files in `LM-BFF/my_auto_label_mapping/manual_template`.
 
 ## Results
-<img src="./image/result.jpg" width="700">  
+<img src="./image/result.jpg" width="800">  
 
 
 ## Citation
