@@ -137,16 +137,16 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-*.sh
+# *.sh
 .venv
 .vscode
-data
+# data
 !data/k-shot/checksum
 log*
 runs
 result
 wandb
 ensemble_predict_results
-auto*
+# auto*
 # my*
 slurm
