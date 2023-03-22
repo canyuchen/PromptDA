@@ -1,5 +1,5 @@
 # PromptDA: Label-guided Data Augmentation for Prompt-based Few-Shot Learners
-**Canyu Chen**, Kai Shu
+[**Canyu Chen**](https://canyuchen.com), [Kai Shu](http://www.cs.iit.edu/~kshu/)
 
 The code for **[PromptDA: Label-guided Data Augmentation for Prompt-based Few-Shot Learners](https://arxiv.org/abs/2205.09229)**, which has been accepted to *Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics* (**EACL 2023**). [paper](https://arxiv.org/abs/2205.09229)
 
@@ -25,19 +25,19 @@ cd PromptDA
 Reproduce the results for standard prompt tuning with template:
 ```bash
 cd test_standard_with_template
-sh test.sh
+CUDA_VISIBLE_DEVICES=0 sh test.sh
 ```
 Reproduce the results for prompt tuning with template + PromptDA with manual label augmentation:
 ```bash
 cd test_promptda_template_manual
-sh test.sh
+CUDA_VISIBLE_DEVICES=0 sh test.sh
 ```
 Reproduce the results for prompt tuning with template + PromptDA with automatic label augmentation:
 ```bash
 cd test_promptda_template
-sh test.sh
+CUDA_VISIBLE_DEVICES=0 sh test.sh
 ```
-It is worth noting that the results of my training process on `CoLA`, `CR`, `MR`, `MPQA`, `SST-2`, `SST-5`, `SUBJ` datasets are recorded in the `*.log` files in `test_promptda_template/test_*`, `test_promptda_template_manual/test_*`, and `test_promptda_template/test_*`.
+It is worth noting that the results of my training process on `CoLA`, `CR`, `MR`, `MPQA`, `SST-2`, `SST-5`, `SUBJ` datasets are recorded in the `*.log` files in `test_standard_with_template/test_*`, `test_promptda_template_manual/test_*`, and `test_promptda_template/test_*`.
 
 
 ## Label Augmentation
