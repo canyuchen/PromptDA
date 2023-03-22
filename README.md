@@ -22,7 +22,7 @@ First, download our repo:
 git clone https://github.com/canyuchen/PromptDA.git
 cd PromptDA
 ```
-Evironment setup (Note that we run the experiments on one NVIDIA GeForce RTX 3090 GPU. We adopt the torch version 1.10.1+cu113. CUDA Version: 11.4):
+Evironment setup (Note that we run the experiments on one NVIDIA GeForce RTX 3090 GPU. We trained the model with the torch version = 1.10.1+cu113 and CUDA Version = 11.4. Results could be different with other torch and CUDA versions.):
 ```bash
 conda create -n promptda python=3.6.13
 pip install -r requirements.txt
