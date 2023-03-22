@@ -22,6 +22,11 @@ First, download our repo:
 git clone https://github.com/canyuchen/PromptDA.git
 cd PromptDA
 ```
+Evironment setup (Note that we run the experiments on one NVIDIA GeForce RTX 3090 GPU. We adopt the torch version 1.10.1+cu113. CUDA Version: 11.4):
+```bash
+conda create -n promptda python=3.6.13
+pip install -r requirements.txt
+```
 Reproduce the results for standard prompt tuning with template:
 ```bash
 cd test_standard_with_template
@@ -41,6 +46,9 @@ It is worth noting that the results of my training process on `CoLA`, `CR`, `MR`
 
 
 ## Label Augmentation
+
+The evironment setup for Label Augmentation is the same as [LM-BFF](https://github.com/princeton-nlp/LM-BFF).
+
 Reproduce automatic label augmentation:
 ```bash
 cd LM-BFF/tools
