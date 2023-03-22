@@ -1,7 +1,7 @@
 # PromptDA: Label-guided Data Augmentation for Prompt-based Few-Shot Learners
 [**Canyu Chen**](https://canyuchen.com), [Kai Shu](http://www.cs.iit.edu/~kshu/)
 
-The code for **[PromptDA: Label-guided Data Augmentation for Prompt-based Few-Shot Learners](https://arxiv.org/abs/2205.09229)**, which has been accepted to *Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics* (**EACL 2023**). [paper](https://arxiv.org/abs/2205.09229)
+The code for **[PromptDA: Label-guided Data Augmentation for Prompt-based Few-Shot Learners](https://arxiv.org/abs/2205.09229)**, which has been accepted to *Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics* (**EACL 2023** main conference). [paper](https://arxiv.org/abs/2205.09229)
 
 
 ## Basic Idea
