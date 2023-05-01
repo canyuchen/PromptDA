@@ -4,8 +4,8 @@ The code for **[PromptDA: Label-guided Data Augmentation for Prompt-based Few-Sh
 [**Canyu Chen**](https://canyuchen.com), [Kai Shu](http://www.cs.iit.edu/~kshu/)<br>
 Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics (**EACL 2023** Main Conference Long Paper). <br>
 [[Paper]](https://arxiv.org/abs/2205.09229)
-[[Slides]](https://drive.google.com/file/d/1aqUdZ6B0-tqjDp_HE5VH5BPkY0B7mucc/view?usp=share_link)
-[[Poster]](https://drive.google.com/file/d/1t-n811sq1897CvHHe3w_QAgUtyGZaN68/view?usp=share_link)
+[[Slides]](https://drive.google.com/file/d/1BqC1ge1n6iNYxpN81qQT9hdjHLuQz_bn/view?usp=sharing)
+[[Poster]](https://drive.google.com/file/d/11z-41wLJLdtmEMin9LnpzD63PhW27vBm/view?usp=sharing)
 
 
 ## Basic Idea
