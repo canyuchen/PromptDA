@@ -1,11 +1,10 @@
 # PromptDA: Label-guided Data Augmentation for Prompt-based Few-Shot Learners
 
-The code for **[PromptDA: Label-guided Data Augmentation for Prompt-based Few-Shot Learners](https://arxiv.org/abs/2205.09229)** <br>
-[**Canyu Chen**](https://canyuchen.com), [Kai Shu](http://www.cs.iit.edu/~kshu/)<br>
-Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics (**EACL 2023** Main Conference Long Paper). <br>
-[[Paper]](https://arxiv.org/abs/2205.09229)
-[[Slides]](https://drive.google.com/file/d/1BqC1ge1n6iNYxpN81qQT9hdjHLuQz_bn/view?usp=sharing)
-[[Poster]](https://drive.google.com/file/d/11z-41wLJLdtmEMin9LnpzD63PhW27vBm/view?usp=sharing)
+> The code for **[PromptDA: Label-guided Data Augmentation for Prompt-based Few-Shot Learners](https://arxiv.org/abs/2205.09229)** <br>[**Canyu Chen**](https://canyuchen.com), [Kai Shu](http://www.cs.iit.edu/~kshu/)<br>
+> Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics (**EACL 2023** Main Conference Long Paper). <br>
+>[[Paper]](https://arxiv.org/abs/2205.09229)
+>[[Slides]](https://drive.google.com/file/d/1BqC1ge1n6iNYxpN81qQT9hdjHLuQz_bn/view?usp=sharing)
+>[[Poster]](https://drive.google.com/file/d/11z-41wLJLdtmEMin9LnpzD63PhW27vBm/view?usp=sharing)
 
 
 ## Basic Idea
